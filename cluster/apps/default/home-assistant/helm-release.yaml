@@ -52,6 +52,31 @@ spec:
         enabled: false
       startup:
         enabled: true
+    configmap:
+      config:
+        enabled: true
+        data:
+          configuration.yaml: |
+            # Loads default set of integrations. Do not remove.
+            default_config:
+
+            # Text to speech
+            tts:
+              - platform: google_translate
+
+            automation: !include automations.yaml
+            script: !include scripts.yaml
+            scene: !include scenes.yaml
+            http:
+              server_host: 0.0.0.0
+              ip_ban_enabled: true
+              login_attempts_threshold: 5
+              use_x_forwarded_for: true
+              trusted_proxies:
+              # Pod CIDR
+              - 10.42.0.0/16
+              # Node CIDR
+              - 192.168.0.0/24
     resources:
       limits:
         memory: 3000Mi
