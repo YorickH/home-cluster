@@ -52,6 +52,11 @@ spec:
         enabled: false
       startup:
         enabled: true
+    persistence:
+      config:
+        enabled: true
+        type: configMap
+        name: home-assistant-config
     configmap:
       config:
         enabled: true
