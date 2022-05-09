@@ -52,13 +52,13 @@ spec:
         enabled: false
       startup:
         enabled: true
-    #persistence:
-    #  config:
-    #    enabled: true
-    #    mountPath: /config
-    #    type: hostPath
-    #    hostPath: /etc/home-assistant
-    #    hostPathType: DirectoryOrCreate
+    persistence:
+      config:
+        enabled: true
+        mountPath: /config/configuration.yaml
+        type: hostPath
+        hostPath: /etc/home-assistant/configuration.yaml
+        hostPathType: DirectoryOrCreate
     resources:
       limits:
         memory: 3000Mi
