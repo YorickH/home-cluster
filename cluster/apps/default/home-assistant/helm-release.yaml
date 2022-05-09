@@ -57,7 +57,7 @@ spec:
         enabled: true
         mountPath: /config
         type: hostPath
-        hostPath: /etc/home-assistant/configuration.yaml
+        hostPath: /etc/home-assistant
         hostPathType: DirectoryOrCreate
     resources:
       limits:
