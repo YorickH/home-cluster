@@ -41,7 +41,7 @@ spec:
         tls:
           - hosts:
               - "ha.${SECRET_DOMAIN}"
-            secretName: "hajimari-tls"
+            secretName: "ha-tls"
     prometheus:
       serviceMonitor:
         enabled: false
