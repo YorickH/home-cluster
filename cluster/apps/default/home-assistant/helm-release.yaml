@@ -58,7 +58,7 @@ spec:
         mountPath: /config/configuration.yaml
         type: hostPath
         hostPath: /etc/home-assistant/configuration.yaml
-        hostPathType: File
+        hostPathType: FileOrCreate
     resources:
       limits:
         memory: 3000Mi
