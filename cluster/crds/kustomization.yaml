@@ -5,3 +5,5 @@ resources:
   - cert-manager
   - system-upgrade-controller
   - traefik
+  - rook-ceph
+  - external-snapshotter
